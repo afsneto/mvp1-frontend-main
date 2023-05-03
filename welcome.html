@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/styles.css">
+    <script type="text/javascript" src="scripts/scripts.js"></script>
+    <title>Cadastro de cabos</title>
+</head>
+
+<body>
+    <!-- Cabeçalho de informações do sistema -->
+    <header>
+        <div class="title">
+            <h2>Cadastro de cabos</h2>
+        </div>
+        <div class="banner">
+
+        </div>
+    </header>
+
+    <p>
+        Essa aplicação possibilita o cadastro e levantamento de quantitativo de cabos armazenados.
+        Para maiores informações dos dados técnicos para cada cabo: <br>
+        <a
+            href="https://www.southwire.com/wire-cable/bare-aluminum-overhead-transmission-distribution/c/c-bare-aluminum-overhead">Catálogos
+            Southwire</a>
+    </p>
+
+
+
+    <!-- Opções para adicionar uma novo cabo -->
+    <div class="item" id="formCadastro">
+        <table class="form">
+            <tr class="form">
+                <th>Tipo</th>
+                <th>Nome</th>
+                <th>Diametro [mm]</th>
+                <th>Peso [kg/km]</th>
+                <th>Capacidade [A]</th>
+                <th>Quantidade [km]</th>
+
+            </tr>
+            <tr class="form">
+                <td>
+                    <select id="input_tipo" style="height: 30px;">
+                        <option value="ACSR" selected>ACSR</option>
+                        <option value="AAAC" selected>AAAC</option>
+                        <option value="AAC" selected>AAC</option>
+                        <option value="ACAR" selected>ACAR</option>
+                    </select>
+                </td>
+                <td><input type="text" id="input_nome" value="" maxlength="25"></td>
+                <td><input type="number" id="input_diametro" value="" maxlength="5"></td>
+                <td><input type="number" id="input_quantidade" value="" size="9"></td>
+                <td><input type="number" id="input_peso" value="" size="9"></td>
+                <td><input type="number" id="input_capacidade" value="" size="9"></td>
+                <td><span onclick="newItem()" class="addBtn">Incluir</span></td>
+
+            </tr>
+            <tr class="form">
+                <td>Observações</td>
+            </tr>
+            <tr class="form">
+                <td colspan="6">
+                    <textarea id="input_obs" rows="3" cols="100" style="resize:none;text-align:left;" maxlength="200">
+                    </textarea>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+
+    <!-- Cabeçalho da tabela com os cabos existentes -->
+    <h2 align="center">Cabos cadastrados</h2>
+    <div class="item">
+        <table id="myTable" class="tabela-itens">
+            <thead>
+                <tr>
+                    <th>Tipo</th>
+                    <th>Nome</th>
+                    <th>Diametro [mm]</th>
+                    <th>Peso [kg/km]</th>
+                    <th>Capacidade [A]</th>
+                    <th>Quantidade [km]</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Carregando a lista com os cabos já presentes no banco de dados -->
+    <script type="text/javascript">getList();</script>
+
+</body>
+
+</html>

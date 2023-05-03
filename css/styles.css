@@ -1,0 +1,141 @@
+/* Tooltip */
+/* container do tooltip */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+/* texto do tooltip */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 140px;
+    background-color: black;
+    color: #fff;
+    text-align: left;
+    padding: 8px 8px;
+    border-radius: 6px;
+
+    /* posição do texto do tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+/* visibilidade do tooltip - aparece quando se passa o mouse sobre o container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+
+/* Estilos da tabela de itens */
+.tabela-itens {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 14px;
+    min-width: 400px;
+}
+
+.tabela-itens thead tr {
+    background-color: #37a2d4;
+    color: #ffffff;
+    text-align: left;
+}
+
+.tabela-itens th,
+.tabela-itens td {
+    padding: 12px 15px;
+}
+
+.tabela-itens tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.tabela-itens tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.tabela-itens tbody tr:last-of-type {
+    border-bottom: 2px solid #37a2d4;
+}
+
+/* Formatação da tabela de cadastro e botão associado */
+
+table.form {
+    font-size: 13px;
+}
+
+tr.form {
+    text-align: center;
+    font-size: 14px;
+    color: #000000;
+    font-weight: bold;
+}
+
+.addBtn {
+    padding: 6px 6px;
+    background-color: gainsboro;
+    color: black;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+.addBtn:hover {
+    background-color: #ff0000;
+    color: rgb(255, 255, 255);
+}
+
+/* Define uma faixa com imagem em background, a altura da faixa deve ser definida na div */
+
+/* div.faixa {
+    background-image: url("../static/background.jpg");
+} */
+
+/* Demais formatações e estilos */
+
+input {
+    padding: 6px;
+}
+
+.title {
+    color: rgb(0, 0, 0);
+    width: 100%;
+    background-image: url("../static/background_bw.jpg");
+    background-color: rgb(255, 255, 255);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: inline-block;
+    padding: 6px;
+    position: sticky;
+    top: 0px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+body {
+    font-family: tahoma;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 255, 255);
+    /* background-image: url("../static/background1.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed; */
+    background-size: cover;
+}
+
+header {
+    background-color: rgb(225, 222, 199);
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+/* Fonte da tabela com os cabos cadastrados */
+div.item {
+    padding: 5px 5px;
+    color: rgb(12, 54, 3);
+    display: flex;
+    justify-content: center;
+}
